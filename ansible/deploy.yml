@@ -1,0 +1,10 @@
+- name: Deploy Flask App
+  hosts: all
+  tasks:
+    - name: Pull latest image
+      docker_image:
+        name: python-app
+        source: build
+        build:
+          path: .
+
